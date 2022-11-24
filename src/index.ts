@@ -1,9 +1,5 @@
-import { fetchPPubsCaseId } from './fetch-ppubs-case-id'
-import { fetchPPubsPatent } from './fetch-ppubs-patent'
-import { fetchPPubsSearch } from './fetch-ppubs-search'
+import { getPatent } from './getPatent'
 
 export {
-    fetchPPubsCaseId,
-    fetchPPubsPatent,
-    fetchPPubsSearch
+    getPatent
 }
