@@ -1,4 +1,4 @@
 # mocha config for `npm test:js`
 spec:
-  - "test/**/*.js"
+  - "lib/tests/**/*.js"
 timeout: "2000" # same as "timeout: '2s'"

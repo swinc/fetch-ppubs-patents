@@ -1,10 +1,9 @@
 import axios from 'axios'
 
-import { fetchPPubsCaseId } from './helpers/fetch-ppubs-case-id'
-import { fetchPPubsSearch } from './helpers/fetch-ppubs-search'
-import { fetchPPubsPatent } from './helpers/fetch-ppubs-patent'
+import { fetchCaseId } from './helpers/fetchCaseId'
+import { searchPatents } from './searchPatents'
+import { getPatentByGuid } from './getPatentByGuid'
 
-import { PPubsSearchWithBeFamilyAPIResponse } from 'src/types'
 import { PPubsPatentHighlightAPIResponse } from 'src/types'
 
 /**
@@ -14,15 +13,14 @@ import { PPubsPatentHighlightAPIResponse } from 'src/types'
  *      rejects promise if bad patent number or error on retrieval
  */
 export async function getPatent(patentNum: string): Promise<PPubsPatentHighlightAPIResponse> {
-    const caseId = await fetchPPubsCaseId()
-    if( !caseId ) { throw new Error('Could not retrieve caseId from ppubs session API.') }
+    const caseId = await fetchCaseId()
 
     const searchQuery = patentNum + '.pn.'
-    const searchResults = await fetchPPubsSearch(caseId, searchQuery)
+    const searchResults = await searchPatents(searchQuery, caseId)
     if( !searchResults ) { throw new Error('Could not retrieve search results from ppubs search API.') }
 
     const patentGuid = searchResults.patents[0].guid
-    const patentResult = await fetchPPubsPatent(patentGuid)
+    const patentResult = await getPatentByGuid(patentGuid)
     if( !patentResult ) { throw new Error('Could not retrieve patent results from ppubs highlight API.') }
 
     return patentResult

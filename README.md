@@ -4,19 +4,46 @@
 
 It has only one dependency: [axios](https://axios-http.com/).
 
+## Usage
+
+Consistent with the Patent Public Search API, there are only three top-level methods:
+
+* `fp.searchPatents(query)`
+    * returns an object with search details, including an array with basic patent details (guid, title, classifications, etc. but no main text)
+    * see type for fields on returned object
+* `fp.getPatentByGuid(guid)`
+    * returns an object with full patent details
+* `fp.getPatent(patentNumber)`
+    * a convienence function that returns an object with full patent details for the first search hit on the passed `patentNumber` parameter
+
+For example:
+
 ```
-import * as fs from fetch-ppubs-patents
+import * as fp from 'fetch-ppubs-patents'
 
+const results = fp.searchPatents("nvidia.as.")
 
+const firstResult = results.patents[0].publicationReferenceDocumentNumber // "8139878"
 
+const patent = fp.getPatent(firstResult)
 ```
 
-## Building from TypeScript
+## USPTO Terms of Use
 
-`tsc` (`npm run build`) will build the TypeScript files in `src` to the `lib` directory.
+This library uses an undocumented API present in the USPTO Public Patent Search system.
 
-## Testing
+Per the [USPTO Terms of Use](https://www.uspto.gov/terms-use-uspto-websites), this API is "not designed or intended to be a source for bulk downloads of USPTO data when accessed through the website’s interfaces."
 
-`mocha --config mocharc.ts.src.yaml` (`npm test`) will run the *TypeScript* tests in the `test` directory. Use during development.
+Please respect USPTO systems and do not use this API for bulk downloads. Alternative [Electronic Bulk Data Products](https://www.uspto.gov/learning-and-resources/electronic-bulk-data-products) are available.
 
-`mocha --config mocharc.js.lib.yaml` (`npm run test:js`) will run the *JavaScript* tests in the `test` directory. Use to verify correct build for deployment.
+## Development
+
+### Building from TypeScript
+
+`npm run build` will build the TypeScript files in `src` and `tests` directories to the `lib` directory.
+
+### Testing
+
+`npm test` will run the *TypeScript* tests in the `tests` directory. Use during development.
+
+`npm run test:js` will run the *JavaScript* tests in the `lib/tests` directory. Use to verify correct build for deployment.

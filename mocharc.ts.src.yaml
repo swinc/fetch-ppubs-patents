@@ -3,5 +3,5 @@ require:
   - "ts-node/register"
   - "tsconfig-paths/register"
 spec:
-  - "test/**/*.ts"
+  - "tests/**/*.ts"
 timeout: "2000" # same as "timeout: '2s'"
