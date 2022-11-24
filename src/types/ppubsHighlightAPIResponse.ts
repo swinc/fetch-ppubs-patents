@@ -1,3 +1,6 @@
+/**
+ *  Object returned from https://ppubs.uspto.gov//dirsearch-public/patents/[patentGuid]/highlight
+*/
 export type PPubsPatentHighlightAPIResponse = {
     guid: string,
     datePublished: string,
@@ -28,5 +31,5 @@ export type PPubsPatentHighlightAPIResponse = {
     otherRefPub: Array<string>,
     usRefGroup: Array<string>,
     inventorsName: Array<string>
-    /* LOTS OF OTHER STUFF */
+    /* OTHER STUFF */
 }

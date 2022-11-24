@@ -1,3 +1,6 @@
+/**
+ *  Object returned from https://ppubs.uspto.gov/dirsearch-public/users/me/session
+*/
 export type PPubsSessionAPIResponse = {
   userSessionId: number,
   displayName: string,
@@ -6,5 +9,5 @@ export type PPubsSessionAPIResponse = {
     userId: number,
     caseName: string,
   }
-  /* LOTS OF OTHER STUFF */
+  /* OTHER STUFF */
 }
