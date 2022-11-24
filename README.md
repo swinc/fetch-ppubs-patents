@@ -40,10 +40,10 @@ Please respect USPTO systems and do not use this API for bulk downloads. Alterna
 
 ### Building from TypeScript
 
-`npm run build` will build the TypeScript files in `src` and `tests` directories to the `lib` directory.
+`npm run build` will build the TypeScript files in `src` and `tests` directories to the `dist` directory.
 
 ### Testing
 
 `npm test` will run the *TypeScript* tests in the `tests` directory. Use during development.
 
-`npm run test:js` will run the *JavaScript* tests in the `lib/tests` directory. Use to verify correct build for deployment.
+`npm run test:js` will run the *JavaScript* tests in the `dist/tests` directory. Use to verify correct build for deployment.

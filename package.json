@@ -1,12 +1,13 @@
 {
   "name": "@swinc/fetch-ppubs-patents",
   "version": "1.0.0-beta1",
-  "description": "A pure Nodejs TypeScript/JavaScript library for pulling patents from the USPTO Patent Public Search API",
-  "main": "index.js",
+  "description": "A Nodejs TypeScript/JavaScript library for pulling patents from the USPTO Patent Public Search API",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "mocha --config mocharc.ts.src.yaml",
-    "test:js": "mocha --config mocharc.js.lib.yaml"
+    "test:js": "mocha --config mocharc.js.dist.yaml"
   },
   "author": "Iain R. Cunningham",
   "license": "MIT",
