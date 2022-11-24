@@ -4,7 +4,7 @@ export type PPubsSessionAPIResponse = {
   userCase: {
     caseId: number,
     userId: number,
-    caseName: string
+    caseName: string,
   }
   /* LOTS OF OTHER STUFF */
 }

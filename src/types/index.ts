@@ -1,9 +1,9 @@
-import { PPubsSearchFamilyAPIResponse } from './uspto-ppubs-searchFamily-response'
-import { PPubsPatentHighlightAPIResponse } from './uspto-ppubs-patent-highlight-response'
-import { PPubsSessionAPIResponse } from './uspto-ppubs-session-response'
+import { PPubsSearchWithBeFamilyAPIResponse } from './ppubsSearchAPIResponse'
+import { PPubsPatentHighlightAPIResponse } from './ppubsHighlightAPIResponse'
+import { PPubsSessionAPIResponse } from './ppubsSessionAPIResponse'
 
 export {
-  PPubsSearchFamilyAPIResponse,
+  PPubsSearchWithBeFamilyAPIResponse,
   PPubsPatentHighlightAPIResponse,
   PPubsSessionAPIResponse
 }

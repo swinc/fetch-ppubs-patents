@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import { PPubsSearchFamilyAPIResponse } from 'src/types'
+import { PPubsSearchWithBeFamilyAPIResponse } from 'src/types'
 import { PPubsPatentHighlightAPIResponse } from 'src/types'
 
 /**

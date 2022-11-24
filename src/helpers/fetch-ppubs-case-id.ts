@@ -17,6 +17,7 @@ export async function fetchPPubsCaseId(): Promise<number | null> {
 
   try {
     const sessionResponse = await axios.post<PPubsSessionAPIResponse>(host + sessionPath, data, config)
+    console.log(sessionResponse)
     const caseId = sessionResponse.data.userCase.caseId
     return caseId
   } catch (e) {

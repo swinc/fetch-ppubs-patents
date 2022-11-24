@@ -1,4 +1,4 @@
-export type PPubsSearchFamilyAPIResponse = {
+export type PPubsSearchWithBeFamilyAPIResponse = {
   numFound: number,
   perPage: number,
   page: number,
@@ -10,10 +10,10 @@ export type PPubsSearchFamilyAPIResponse = {
     numResults: number
   }
   /* LOTS OF OTHER STUFF */
-  patents: Array<PPubsSearchFamilyPatentData>
+  patents: Array<PPubsSearchWithBeFamilyPatentData>
 }
 
-type PPubsSearchFamilyPatentData = {
+type PPubsSearchWithBeFamilyPatentData = {
   guid: string,
   datePublished: string,
   inventionTitle: string,

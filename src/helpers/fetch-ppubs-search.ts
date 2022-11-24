@@ -1,12 +1,12 @@
 import axios from 'axios'
 
-import { PPubsSearchFamilyAPIResponse } from 'src/types'
+import { PPubsSearchWithBeFamilyAPIResponse } from 'src/types'
 
 /**
  *  Execute a search with the USPTO Patent Public Search: https://ppubs.uspto.gov/pubwebapp/
  *  Returns the full API response with patent guids in an array at response.patents[].guid
  */
-export async function fetchPPubsSearch(caseId: number, query: string): Promise<PPubsSearchFamilyAPIResponse | null> {
+export async function fetchPPubsSearch(caseId: number, query: string): Promise<PPubsSearchWithBeFamilyAPIResponse | null> {
   const host = 'https://ppubs.uspto.gov'
   const searchPath = '/dirsearch-public/searches/searchWithBeFamily'
 
@@ -34,7 +34,7 @@ export async function fetchPPubsSearch(caseId: number, query: string): Promise<P
   }
 
   try {
-    const searchResponse = await axios.post<PPubsSearchFamilyAPIResponse>(host + searchPath, postData)
+    const searchResponse = await axios.post<PPubsSearchWithBeFamilyAPIResponse>(host + searchPath, postData)
     return searchResponse.data
   } catch (e) {
     // console.error(`Unable to retrieve query "${query}" with fetchPPubsSearch(): ` + e)

@@ -4,7 +4,7 @@ import { fetchPPubsCaseId } from './helpers/fetch-ppubs-case-id'
 import { fetchPPubsSearch } from './helpers/fetch-ppubs-search'
 import { fetchPPubsPatent } from './helpers/fetch-ppubs-patent'
 
-import { PPubsSearchFamilyAPIResponse } from 'src/types'
+import { PPubsSearchWithBeFamilyAPIResponse } from 'src/types'
 import { PPubsPatentHighlightAPIResponse } from 'src/types'
 
 /**
@@ -14,18 +14,16 @@ import { PPubsPatentHighlightAPIResponse } from 'src/types'
  *      rejects promise if bad patent number or error on retrieval
  */
 export async function getPatent(patentNum: string): Promise<PPubsPatentHighlightAPIResponse> {
-    const newCaseId = await fetchPPubsCaseId()
-    if( !newCaseId ) { throw new Error('Could not retrieve caseId from ppubs session API.') }
+    const caseId = await fetchPPubsCaseId()
+    if( !caseId ) { throw new Error('Could not retrieve caseId from ppubs session API.') }
 
-    // search for patent
-    const query = patentNum + '.pn.'
-    const queryResults = await fetchPPubsSearch(caseId, query)
-    if(!queryResults) { throw new Error('cannot obtain query results') }
+    const searchQuery = patentNum + '.pn.'
+    const searchResults = await fetchPPubsSearch(caseId, searchQuery)
+    if( !searchResults ) { throw new Error('Could not retrieve search results from ppubs search API.') }
 
-    // pull patent
-    const guid = queryResults.patents[0].guid
-    const patentResult = await fetchPPubsPatent(guid)
-    if(!patentResult) { throw new Error('cannot get patent') }
+    const patentGuid = searchResults.patents[0].guid
+    const patentResult = await fetchPPubsPatent(patentGuid)
+    if( !patentResult ) { throw new Error('Could not retrieve patent results from ppubs highlight API.') }
 
     return patentResult
 }
