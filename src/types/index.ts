@@ -1,6 +1,6 @@
-import { PPubsSearchWithBeFamilyAPIResponse } from './ppubsSearchAPIResponse'
-import { PPubsPatentHighlightAPIResponse } from './ppubsHighlightAPIResponse'
-import { PPubsSessionAPIResponse } from './ppubsSessionAPIResponse'
+import { PPubsSearchWithBeFamilyAPIResponse } from './PPubsSearchAPIResponse'
+import { PPubsPatentHighlightAPIResponse } from './PPubsHighlightAPIResponse'
+import { PPubsSessionAPIResponse } from './PPubsSessionAPIResponse'
 
 export {
   PPubsSearchWithBeFamilyAPIResponse,
