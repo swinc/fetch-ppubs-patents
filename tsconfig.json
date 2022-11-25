@@ -12,12 +12,9 @@
       "paths": {
         "src/*": ["./src/*"],
       },
-      "plugins": [{ "name": "typescript-plugin-css-modules" }],
       "strict": true,
-      "target": "es2020",
-      "typeRoots" : ["node_modules/@types", "types"]
+      "target": "es2020"
     },
-    "include": ["src/**/*", "tests/**/*"],
-    "exclude": ["node_modules"]
+    "include": ["src/**/*", "tests/**/*"]
   }
   
