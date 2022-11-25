@@ -7,7 +7,7 @@ import { PPubsSessionAPIResponse } from 'src/types'
  *  This is used for later search and patent fetch calls.
  *  @returns {Promise} resolves to caseId or rejects with error
  */
-export async function fetchCaseId(): Promise<number> {
+export async function fetchCaseId (): Promise<number> {
   const url = 'https://ppubs.uspto.gov/dirsearch-public/users/me/session'
 
   const data = '-1'
