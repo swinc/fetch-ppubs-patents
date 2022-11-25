@@ -2,7 +2,7 @@ import axios from 'axios'
 
 import { fetchCaseId } from './helpers'
 
-import { PPubsSearchWithBeFamilyAPIResponse } from 'src/types'
+import { PPubsSearchWithBeFamilyAPIResponse } from '../types'
 
 /**
  *  Execute a search with the USPTO Patent Public Search: https://ppubs.uspto.gov/pubwebapp/
