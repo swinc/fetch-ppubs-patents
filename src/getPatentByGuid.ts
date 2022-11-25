@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import { PPubsPatentHighlightAPIResponse } from '../types'
+import { PPubsPatentHighlightAPIResponse } from 'src/types'
 
 /**
  *  Fetch a single patent from the USPTO Patent Public Search: https://ppubs.uspto.gov/pubwebapp/ 

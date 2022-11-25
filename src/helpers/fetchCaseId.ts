@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import { PPubsSessionAPIResponse } from '../../types'
+import { PPubsSessionAPIResponse } from 'src/types'
 
 /**
  *  Fetch a case id from the USPTO Patent Public Search: https://ppubs.uspto.gov/pubwebapp/
