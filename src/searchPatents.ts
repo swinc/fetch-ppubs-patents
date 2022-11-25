@@ -11,34 +11,34 @@ import { PPubsSearchWithBeFamilyAPIResponse } from 'src/types'
  *  @returns {Promise} - resolves to object with PPubsSearchWithBeFamilyAPIRespons type, or
  *      rejects promise if bad patent number or error on retrieval
  */
-export async function searchPatents(query: string, caseId: (number|null) = null): Promise<PPubsSearchWithBeFamilyAPIResponse> {
-    const url = 'https://ppubs.uspto.gov/dirsearch-public/searches/searchWithBeFamily'
+export async function searchPatents (query: string, caseId: (number | null) = null): Promise<PPubsSearchWithBeFamilyAPIResponse> {
+  const url = 'https://ppubs.uspto.gov/dirsearch-public/searches/searchWithBeFamily'
 
-    if( !caseId ) caseId = await fetchCaseId()
+  if (caseId == null) caseId = await fetchCaseId()
 
-    // minimum data for posting to searchWithBeFamily API
-    const postData = {
-    "pageCount":500,
-    "sort":"date_publ desc",
-    "docFamilyFiltering":"familyIdFiltering",
-    "showDocPerFamilyPref":"showEnglish",
-    "query": {
-        "caseId": caseId,
-        "hl_snippets":"2",
-        "op":"OR",
-        "q": query,
-        "queryName": query,
-        "highlights":"1",
-        "viewName":"tile",
-        "databaseFilters": [
-            {"databaseName":"US-PGPUB","countryCodes":[]},
-            {"databaseName":"USPAT","countryCodes":[]},
-            {"databaseName":"USOCR","countryCodes":[]}
-        ],
-        "userEnteredQuery": query
+  // minimum data for posting to searchWithBeFamily API
+  const postData = {
+    pageCount: 500,
+    sort: 'date_publ desc',
+    docFamilyFiltering: 'familyIdFiltering',
+    showDocPerFamilyPref: 'showEnglish',
+    query: {
+      caseId,
+      hl_snippets: '2',
+      op: 'OR',
+      q: query,
+      queryName: query,
+      highlights: '1',
+      viewName: 'tile',
+      databaseFilters: [
+        { databaseName: 'US-PGPUB', countryCodes: [] },
+        { databaseName: 'USPAT', countryCodes: [] },
+        { databaseName: 'USOCR', countryCodes: [] }
+      ],
+      userEnteredQuery: query
     }
-    }
-    
-    const searchResponse = await axios.post<PPubsSearchWithBeFamilyAPIResponse>(url, postData)
-    return searchResponse.data
+  }
+
+  const searchResponse = await axios.post<PPubsSearchWithBeFamilyAPIResponse>(url, postData)
+  return searchResponse.data
 }

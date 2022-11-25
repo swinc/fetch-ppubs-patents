@@ -3,7 +3,7 @@ import { getPatentByGuid } from './getPatentByGuid'
 import { getPatent } from './getPatent'
 
 export {
-    searchPatents,
-    getPatentByGuid,
-    getPatent
+  searchPatents,
+  getPatentByGuid,
+  getPatent
 }
