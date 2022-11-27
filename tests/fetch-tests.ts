@@ -9,7 +9,7 @@ import * as fp from '../src'
 import { fetchCaseId } from '../src/helpers'
 
 describe('fetch tests', function () {
-  const patentNumber = '8139878'
+  const patentNumber = '11508113'
   const patentNumbers = ['8139878', '11276648', '11275662']
 
   it('should correctly fetch a case id', async function () {
@@ -36,6 +36,7 @@ describe('fetch tests', function () {
 
   it('should correctly fetch a patent with a patent number', async function () {
     const patent = await fp.getPatent(patentNumber)
+    console.log(patent)
     expect(patent.guid).to.equal('US-8139878-B2')
   })
 

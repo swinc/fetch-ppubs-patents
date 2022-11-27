@@ -23,10 +23,34 @@ import * as fp from 'fetch-ppubs-patents'
 
 const results = fp.searchPatents("nvidia.as.")
 
-const firstResult = results.patents[0].publicationReferenceDocumentNumber // "8139878"
+const firstResult = results.patents[0].publicationReferenceDocumentNumber // "11508113"
 
 const patent = fp.getPatent(firstResult)
+
+console.log(patent)
+
+{
+  guid: 'US-11508113-B2',
+  publicationReferenceDocumentNumber: '11508113',
+  compositeId: '1000006700342!US-US-11508113',
+  publicationReferenceDocumentNumber1: '11508113',
+  datePublishedKwicHits: null,
+  datePublished: '2022-11-22T00:00:00Z',
+  inventionTitle: 'Denoising techniques suitable for recurrent blurs',
+  type: 'USPAT',
+  mainClassificationCode: '1/1',
+  applicantName: [ 'NVIDIA Corporation' ],
+  assigneeName: [ 'NVIDIA Corporation' ],
+  /* LOTS OF OTHER STUFF */
+}
 ```
+### Properties of API Responses
+
+Properties of the API responses are defined in the `src/types` directory.
+
+The search API response is defined in [PPubsSearchAPIResponse.ts](./src/types/PPubsSearchAPIResponse.ts).
+
+The patent API response is defined in [PPubsHighlightAPIResponse.ts](./src/types/PPubsHighlightAPIResponse.ts).
 
 ## USPTO Terms of Use
 
