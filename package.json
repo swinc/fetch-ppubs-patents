@@ -6,10 +6,9 @@
   "types": "dist/src/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "preversion": "npm test && npm run build && npm run test:js",
     "test": "mocha --config mocharc.ts.src.yaml",
-    "test:js": "mocha --config mocharc.js.dist.yaml",
-    "preversion": "npm test",
-    "version": "npm run build"
+    "test:js": "mocha --config mocharc.js.dist.yaml"
   },
   "author": "Iain R. Cunningham",
   "license": "MIT",
