@@ -7,7 +7,9 @@
   "scripts": {
     "build": "tsc",
     "test": "mocha --config mocharc.ts.src.yaml",
-    "test:js": "mocha --config mocharc.js.dist.yaml"
+    "test:js": "mocha --config mocharc.js.dist.yaml",
+    "preversion": "npm test",
+    "version": "npm run build"
   },
   "author": "Iain R. Cunningham",
   "license": "MIT",
