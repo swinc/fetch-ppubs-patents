@@ -36,8 +36,7 @@ describe('fetch tests', function () {
 
   it('should correctly fetch a patent with a patent number', async function () {
     const patent = await fp.getPatent(patentNumber)
-    console.log(patent)
-    expect(patent.guid).to.equal('US-8139878-B2')
+    expect(patent.guid).to.equal('US-11508113-B2')
   })
 
   it('should reject the promise if the patent is an error', async function () {
