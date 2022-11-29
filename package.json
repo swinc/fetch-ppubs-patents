@@ -2,6 +2,7 @@
   "name": "@swinc/fetch-ppubs-patents",
   "version": "1.0.0",
   "description": "A Nodejs TypeScript/JavaScript library for pulling patents from the USPTO Patent Public Search API",
+  "keywords": [ "patent", "patent-search", "patent-data" ],
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
   "scripts": {
