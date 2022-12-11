@@ -2,7 +2,7 @@
  *  Object returned from https://ppubs.uspto.gov//dirsearch-public/patents/[patentGuid]/highlight
 */
 export interface PPubsPatentHighlightAPIResponse {
-  guid: string
+  guid: `${string}-${string}-${string}`
   publicationReferenceDocumentNumber: string
   compositeId: string
   publicationReferenceDocumentNumber1: string
