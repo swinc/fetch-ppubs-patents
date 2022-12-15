@@ -1,13 +1,15 @@
 {
     "compilerOptions": {
       "allowJs": false,
+      "allowSyntheticDefaultImports": false,
       "declaration": true,
-      "esModuleInterop": true,
+      "esModuleInterop": false,
       "forceConsistentCasingInFileNames": true,
       "inlineSourceMap": true,
       "lib": ["es2022", "DOM"],
       "module": "commonjs",
       "moduleResolution": "node",
+      "noUncheckedIndexedAccess": true,
       "outDir": "dist",
       "paths": {
         "src/*": ["./src/*"],

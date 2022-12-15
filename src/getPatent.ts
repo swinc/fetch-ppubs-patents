@@ -16,7 +16,10 @@ export async function getPatent (patentNum: string): Promise<PPubsPatentHighligh
   const searchQuery = patentNum + '.pn.'
   const searchResults = await searchPatents(searchQuery, caseId)
 
-  const patentGuid = searchResults.patents[0].guid
+  const patentGuid = searchResults.patents[0]?.guid
+  if (typeof patentGuid !== 'string') {
+    throw new Error(`Could not extract guid field from search API response for ${patentNum}. Attempt resulted in ${typeof patentGuid}.`)
+  }
   const patentResult = await getPatentByGuid(patentGuid)
 
   return patentResult
