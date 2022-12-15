@@ -122,7 +122,7 @@ export interface PPubsPatentHighlightAPIResponse {
   inventorPostalCode: string[]
   standardTitleTermsHighlights: unknown
   primaryExaminerHighlights: string
-  continuityData: string[]
+  continuityData: string[] | null
   inventors: unknown
   uspcFullClassification: unknown
   uspcCodeFmtFlattened: unknown
@@ -165,7 +165,7 @@ export interface PPubsPatentHighlightAPIResponse {
   descriptionHtml: string
   claimsHtml: string
   briefHtml: string
-  backgroundTextHtml: string
+  backgroundTextHtml: string | null
   subHeadingM0Html: unknown
   subHeadingM1Html: unknown
   subHeadingM2Html: unknown

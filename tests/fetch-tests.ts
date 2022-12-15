@@ -2,7 +2,7 @@
 
 import * as chai from 'chai'
 import { expect } from 'chai'
-import chaiAsPromised from 'chai-as-promised'
+const chaiAsPromised = require('chai-as-promised') // must use commonjs due to esModuleInterop: false
 chai.use(chaiAsPromised)
 
 import * as fp from '../src'
@@ -21,9 +21,9 @@ describe('fetch tests', function () {
     const query = patentNumbers.map((num) => num + '.pn.').join(' OR ')
     const searchResults = await fp.searchPatents(query)
     expect(searchResults.numFound).to.equal(3)
-    expect(searchResults.patents[0].guid).to.equal('US-11276648-B2')
-    expect(searchResults.patents[1].guid).to.equal('US-11275662-B2')
-    expect(searchResults.patents[2].guid).to.equal('US-8139878-B2')
+    expect(searchResults.patents[0]?.guid).to.equal('US-11276648-B2')
+    expect(searchResults.patents[1]?.guid).to.equal('US-11275662-B2')
+    expect(searchResults.patents[2]?.guid).to.equal('US-8139878-B2')
   })
 
   it('should correctly fetch patent by guid', async function () {
