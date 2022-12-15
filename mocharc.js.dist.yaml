@@ -1,4 +1,7 @@
-# mocha config for `npm test:js`
+# mocha config for `npm run test:js`
+require:
+  - "ts-node/register"
+  - "tsconfig-paths/register"
 spec:
-  - "dist/tests/**/*.js"
+  - "tests/fetch-tests-for-dist.ts"
 timeout: "2000" # same as "timeout: '2s'"
