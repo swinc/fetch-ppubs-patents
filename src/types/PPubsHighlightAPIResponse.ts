@@ -4,63 +4,63 @@
 export interface PPubsPatentHighlightAPIResponse {
   guid: `${string}-${string}-${string}`
   publicationReferenceDocumentNumber: string
-  compositeId: string
-  publicationReferenceDocumentNumber1: string
+  compositeId: string | null
+  publicationReferenceDocumentNumber1: string | null
   datePublishedKwicHits: unknown
-  datePublished: string
-  inventionTitle: string
-  type: string
-  mainClassificationCode: string
+  datePublished: string | null
+  inventionTitle: string | null
+  type: string | null
+  mainClassificationCode: string | null
   applicantName: unknown
-  assigneeName: string[]
+  assigneeName: string[] | null
   uspcFullClassificationFlattened: string | null
-  ipcCodeFlattened: string
-  cpcInventiveFlattened: string
+  ipcCodeFlattened: string | null
+  cpcInventiveFlattened: string | null
   cpcAdditionalFlattened: unknown
-  applicationFilingDate: string[]
+  applicationFilingDate: string[] | null
   applicationFilingDateKwicHits: unknown
-  relatedApplFilingDate: string[]
-  primaryExaminer: string
+  relatedApplFilingDate: string[] | null
+  primaryExaminer: string | null
   assistantExaminer: unknown
-  applicationNumber: string
-  frontPageStart: number
-  frontPageEnd: number
-  drawingsStart: number
-  drawingsEnd: number
-  specificationStart: number
-  specificationEnd: number
-  claimsStart: number
-  claimsEnd: number
-  abstractStart: number
-  abstractEnd: number
-  bibStart: number
-  bibEnd: number
-  certCorrectionStart: number
-  certCorrectionEnd: number
-  certReexaminationStart: number
-  certReexaminationEnd: number
-  supplementalStart: number
-  supplementalEnd: number
-  ptabStart: number
-  ptabEnd: number
-  amendStart: number
-  amendEnd: number
-  searchReportStart: number
-  searchReportEnd: number
-  pageCount: number
-  pageCountDisplay: string
-  previouslyViewed: boolean
-  unused: boolean
-  imageLocation: string
-  imageFileName: string
+  applicationNumber: string | null
+  frontPageStart: number | null
+  frontPageEnd: number | null
+  drawingsStart: number | null
+  drawingsEnd: number | null
+  specificationStart: number | null
+  specificationEnd: number | null
+  claimsStart: number | null
+  claimsEnd: number | null
+  abstractStart: number | null
+  abstractEnd: number | null
+  bibStart: number | null
+  bibEnd: number | null
+  certCorrectionStart: number | null
+  certCorrectionEnd: number | null
+  certReexaminationStart: number | null
+  certReexaminationEnd: number | null
+  supplementalStart: number | null
+  supplementalEnd: number | null
+  ptabStart: number | null
+  ptabEnd: number | null
+  amendStart: number | null
+  amendEnd: number | null
+  searchReportStart: number | null
+  searchReportEnd: number | null
+  pageCount: number | null
+  pageCountDisplay: string | null
+  previouslyViewed: boolean | null
+  unused: boolean | null
+  imageLocation: string | null
+  imageFileName: string | null
   cpcCodes: unknown
-  queryId: number
+  queryId: number | null
   tags: unknown
-  inventorsShort: string
-  familyIdentifierCur: number
-  familyIdentifierCurStr: string
-  languageIndicator: string
-  databaseName: string
+  inventorsShort: string | null
+  familyIdentifierCur: number | null
+  familyIdentifierCurStr: string | null
+  languageIndicator: string | null
+  databaseName: string | null
   dwImageDoctypeList: unknown
   dwImageLocList: unknown
   dwPageCountList: unknown
@@ -80,23 +80,23 @@ export interface PPubsPatentHighlightAPIResponse {
   pfApplicationDateKwicHits: unknown
   clippedUri: unknown
   source: unknown
-  documentId: string
+  documentId: string | null
   derwentAccessionNumber: unknown
-  documentSize: number
-  score: number
+  documentSize: number | null
+  score: number | null
   governmentInterest: unknown
-  kindCode: string[]
-  urpn: string[]
-  urpnCode: string[]
+  kindCode: string[] | null
+  urpn: string[] | null
+  urpnCode: string[] | null
   abstractedPatentNumber: unknown
-  assigneeCity: string[]
-  assigneePostalCode: string[]
-  assigneeState: string[]
-  assigneeTypeCode: string[]
-  curIntlPatentClassificationPrimary: string[]
+  assigneeCity: string[] | null
+  assigneePostalCode: string[] | null
+  assigneeState: string[] | null
+  assigneeTypeCode: string[] | null
+  curIntlPatentClassificationPrimary: string[] | null
   curIntlPatentClassificationPrimaryDateKwicHits: unknown
   designatedStates: unknown
-  examinerGroup: string
+  examinerGroup: string | null
   issuedUsCrossRefClassification: string[] | null
   jpoFtermCurrent: unknown
   languageOfSpecification: unknown
@@ -116,19 +116,19 @@ export interface PPubsPatentHighlightAPIResponse {
   applicantZipCode: unknown
   applicantAuthorityType: unknown
   applicantDescriptiveText: unknown
-  applicationSerialNumber: string[]
-  inventorCity: string[]
-  inventorState: string[]
-  inventorPostalCode: string[]
+  applicationSerialNumber: string[] | null
+  inventorCity: string[] | null
+  inventorState: string[] | null
+  inventorPostalCode: string[] | null
   standardTitleTermsHighlights: unknown
-  primaryExaminerHighlights: string
+  primaryExaminerHighlights: string | null
   continuityData: string[] | null
   inventors: unknown
   uspcFullClassification: unknown
   uspcCodeFmtFlattened: unknown
   ipcCode: unknown
-  applicationNumberHighlights: string[]
-  dateProduced: string
+  applicationNumberHighlights: string[] | null
+  dateProduced: string | null
   auxFamilyMembersGroupTempPlaceHolder: unknown
   priorityCountryCode: unknown
   cpcCurAdditionalClassification: unknown
@@ -139,15 +139,15 @@ export interface PPubsPatentHighlightAPIResponse {
   europeanClassificationMain: unknown
   europeanClassificationSecondary: unknown
   lanuageIndicator: unknown
-  intlPubClassificationPrimary: string[]
+  intlPubClassificationPrimary: string[] | null
   intlPubClassificationPrimaryDateKwicHits: unknown
-  intlPubClassificationSecondary: string[]
+  intlPubClassificationSecondary: string[] | null
   intlPubClassificationSecondaryDateKwicHits: unknown
   publicationDate: unknown
   derwentWeekInt: number
   derwentWeek: unknown
-  currentUsOriginalClassification: string
-  currentUsCrossReferenceClassification: string[]
+  currentUsOriginalClassification: string | null
+  currentUsCrossReferenceClassification: string[] | null
   locarnoClassification: unknown
   equivalentAbstractText: unknown
   hagueIntlRegistrationNumber: unknown
@@ -159,12 +159,12 @@ export interface PPubsPatentHighlightAPIResponse {
   hagueIntlRegistrationPubDateKwicHits: unknown
   curIntlPatentClassificationNoninvention: unknown
   curIntlPatentClassificationNoninventionDateKwicHits: unknown
-  curIntlPatentClassificationSecondary: string[]
+  curIntlPatentClassificationSecondary: string[] | null
   curIntlPatentClassificationSecondaryDateKwicHits: unknown
-  abstractHtml: string
-  descriptionHtml: string
-  claimsHtml: string
-  briefHtml: string
+  abstractHtml: string | null
+  descriptionHtml: string | null
+  claimsHtml: string | null
+  briefHtml: string | null
   backgroundTextHtml: string | null
   subHeadingM0Html: unknown
   subHeadingM1Html: unknown
@@ -173,10 +173,10 @@ export interface PPubsPatentHighlightAPIResponse {
   subHeadingM4Html: unknown
   subHeadingM5Html: unknown
   subHeadingM6Html: unknown
-  usClassIssued: string
+  usClassIssued: string | null
   issuedUsDigestRefClassifi: unknown
-  datePublYear: string
-  applicationYear: string
+  datePublYear: string | null
+  applicationYear: string | null
   pfDerwentWeekYear: unknown
   pfApplicationYear: unknown
   pfPublYear: unknown
@@ -187,14 +187,14 @@ export interface PPubsPatentHighlightAPIResponse {
   affidavit130BText: unknown
   applicantGroup: unknown
   applicantHeader: unknown
-  applicationFilingDateInt: number
+  applicationFilingDateInt: number | null
   applicationFilingDateIntKwicHits: unknown
   applicationRefFilingType: unknown
   applicationReferenceGroup: unknown
-  applicationSeriesAndNumber: string
-  applicationSeriesCode: string
+  applicationSeriesAndNumber: string | null
+  applicationSeriesCode: string | null
   assignee1: unknown
-  assigneeDescriptiveText: string[]
+  assigneeDescriptiveText: string[] | null
   patentAssigneeTerms: unknown
   associateAttorneyName: unknown
   attorneyName: unknown
@@ -202,13 +202,13 @@ export interface PPubsPatentHighlightAPIResponse {
   applicationType: unknown
   unlinkedDerwentRegistryNumber: unknown
   unlinkedRingIndexNumbersRarerFragments: unknown
-  claimStatement: string
+  claimStatement: string | null
   claimsTextAmended: unknown
   continuedProsecutionAppl: unknown
   cpcAdditionalLong: unknown
   cpcCisClassificationOrig: unknown
   cpcCombinationClassificationOrig: unknown
-  cpcInventive: string[]
+  cpcInventive: string[] | null
   cpcInventiveCurrentDateKwicHits: unknown
   cpcAdditional: unknown
   cpcAdditionalCurrentDateKwicHits: unknown
@@ -225,33 +225,33 @@ export interface PPubsPatentHighlightAPIResponse {
   drawingDescription: unknown
   editionField: unknown
   exchangeWeek: unknown
-  exemplaryClaimNumber: string[]
+  exemplaryClaimNumber: string[] | null
   familyIdentifierOrig: unknown
   fieldOfSearchCpcClassification: unknown
   fieldOfSearchCpcMainClass: unknown
   fieldOfSearchIpcMainClass: unknown
   fieldOfSearchIpcMainClassSubclass: unknown
-  fieldOfSearchSubclasses: string[]
-  foreignRefGroup: string[]
-  foreignRefPubDate: string[]
-  foreignRefPubDateKwicHits: string[]
-  foreignRefCitationClassification: string[]
-  foreignRefPatentNumber: string[]
+  fieldOfSearchSubclasses: string[] | null
+  foreignRefGroup: string[] | null
+  foreignRefPubDate: string[] | null
+  foreignRefPubDateKwicHits: string[] | null
+  foreignRefCitationClassification: string[] | null
+  foreignRefPatentNumber: string[] | null
   foreignRefCitationCpc: unknown
-  foreignRefCountryCode: string[]
-  iceXmlIndicator: string
+  foreignRefCountryCode: string[] | null
+  iceXmlIndicator: string | null
   internationalClassificationHeader: unknown
   internationalClassificationInformationalGroup: unknown
-  intlPubClassificationGroup: string[]
+  intlPubClassificationGroup: string[] | null
   intlPubClassificationNonInvention: unknown
   inventorCitizenship: unknown
   inventorCorrection: unknown
   inventorDeceased: unknown
-  inventorStreetAddress: string[]
-  inventorText: string[]
+  inventorStreetAddress: string[] | null
+  inventorText: string[] | null
   jpoFiClassification: unknown
   legalRepresentativeCity: unknown
-  legalRepresentativeCountry: string
+  legalRepresentativeCountry: string | null
   legalRepresentativeName: unknown
   legalRepresentativePostcode: unknown
   legalRepresentativeState: unknown
@@ -259,9 +259,9 @@ export interface PPubsPatentHighlightAPIResponse {
   legalRepresentativeText: unknown
   messengerDocsFlag: unknown
   newRecordPatentDerwent: unknown
-  numberOfClaims: string
-  numberOfDrawingSheets: string
-  numberOfFigures: string
+  numberOfClaims: string | null
+  numberOfDrawingSheets: string | null
+  numberOfFigures: string | null
   numberOfPagesInSpecification: unknown
   numberOfPagesOfSpecification: unknown
   objectContents: unknown
@@ -273,8 +273,8 @@ export interface PPubsPatentHighlightAPIResponse {
   pfDerwentWeekNum: unknown
   principalAttorneyName: unknown
   priorityApplicationCountry: unknown
-  priorityClaimsCountry: string[]
-  priorityNumberDerived: string[]
+  priorityClaimsCountry: string[] | null
+  priorityNumberDerived: string[] | null
   publicationIssueNumber: unknown
   refCitedPatentDocNumber: unknown
   refCitedPatentDocDate: unknown
@@ -293,9 +293,9 @@ export interface PPubsPatentHighlightAPIResponse {
   reissuedPatentApplCountry: unknown
   reissuedPatentApplKind: unknown
   reissuedPatentApplNumber: unknown
-  relatedApplChildPatentCountry: string[]
+  relatedApplChildPatentCountry: string[] | null
   relatedApplChildPatentName: unknown
-  relatedApplChildPatentNumber: string[]
+  relatedApplChildPatentNumber: string[] | null
   relatedApplCountryCode: unknown
   relatedApplParentGrantPatentKind: unknown
   relatedApplParentGrantPatentName: unknown
@@ -303,46 +303,46 @@ export interface PPubsPatentHighlightAPIResponse {
   relatedApplParentPatentName: unknown
   relatedApplParentPctDoc: unknown
   relatedApplParentStatusCode: unknown
-  relatedApplPatentNumber: string[]
+  relatedApplPatentNumber: string[] | null
   relatedApplRelatedPub: unknown
   relatedApplTypeOfCorrection: unknown
   rule47Flag: unknown
   selectedDrawingCharacter: unknown
   selectedDrawingFigure: unknown
   statutoryInventionText: unknown
-  termOfExtension: string
+  termOfExtension: string | null
   termOfPatentGrant: unknown
   titleTermsData: unknown
   additionalIndexingTerm: unknown
-  applicationYearSearch: string
+  applicationYearSearch: string | null
   pfApplicationYearSearch: unknown
-  assigneeCountry: string[]
+  assigneeCountry: string[] | null
   certOfCorrectionFlag: unknown
   citedPatentLiteratureAddressInformation: unknown
   citedPatentLiteratureClassificationIpc: unknown
   citedPatentLiteratureOrganizationName: unknown
   citedPatentLiteratureRefNumber: unknown
   crossReferenceNumber: unknown
-  country: string
+  country: string | null
   cpiManualCodes: unknown
   cpiSecondaryAccessionNumber: unknown
   curIntlPatentAllClassificationLong: unknown
   currentUsOriginalClassificationLong: unknown
-  datePublSearch: string
-  datePublYearSearch: string
+  datePublSearch: string | null
+  datePublYearSearch: string | null
   epiManualCodes: unknown
-  fieldOfSearchMainClassNational: string[]
-  inventorCountry: string[]
-  ipcAllMainClassification: string[]
-  issuedUsClassificationFull: string[]
-  issuedUsDigestRefClassification: string[]
+  fieldOfSearchMainClassNational: string[] | null
+  inventorCountry: string[] | null
+  ipcAllMainClassification: string[] | null
+  issuedUsClassificationFull: string[] | null
+  issuedUsDigestRefClassification: string[] | null
   jpoFiCurrentAdditionalClassification: unknown
   jpoFiCurrentInventiveClassification: unknown
-  legalFirmName: string[]
+  legalFirmName: string[] | null
   locarnoMainClassification: unknown
   nonCpiSecondaryAccessionNumber: unknown
   objectId: unknown
-  otherRefPub: string[]
+  otherRefPub: string[] | null
   pageNumber: unknown
   patentAssigneeCode: unknown
   patentAssigneeNameTotal: unknown
@@ -379,22 +379,22 @@ export interface PPubsPatentHighlightAPIResponse {
   polymerIndexingCodes: unknown
   polymerMultipunchCodeRecordNumber: unknown
   polymerMultipunchCodes: unknown
-  priorPublishedDocCountryCode: string[]
-  priorPublishedDocDate: string[]
+  priorPublishedDocCountryCode: string[] | null
+  priorPublishedDocDate: string[] | null
   priorPublishedDocDateKwicHits: unknown
-  priorPublishedDocIdentifier: string[]
-  priorPublishedDocKindCode: string[]
-  priorPublishedDocNumber: string[]
-  priorityApplYear: string[]
+  priorPublishedDocIdentifier: string[] | null
+  priorPublishedDocKindCode: string[] | null
+  priorPublishedDocNumber: string[] | null
+  priorityApplYear: string[] | null
   priorityApplicationDate: unknown
   priorityClaimsDateSearch: unknown
-  priorityClaimsDocNumber: string[]
+  priorityClaimsDocNumber: string[] | null
   priorityPatentDid: unknown
   priorityPatentNumber: unknown
   ptabCertFlag: unknown
   pubRefCountryCode: unknown
-  pubRefDocNumber: string
-  pubRefDocNumber1: string
+  pubRefDocNumber: string | null
+  pubRefDocNumber1: string | null
   publicationData: unknown
   recordPatentNumber: unknown
   reexaminationFlag: unknown
@@ -407,7 +407,7 @@ export interface PPubsPatentHighlightAPIResponse {
   relatedAccessionNumbers: unknown
   relatedApplChildPatentDate: unknown
   relatedApplFilingDateKwicHits: unknown
-  relatedApplNumber: string[]
+  relatedApplNumber: string[] | null
   relatedApplPatentIssueDate: unknown
   relatedApplPatentIssueDateKwicHits: unknown
   relatedDocumentKindCode: unknown
@@ -420,36 +420,36 @@ export interface PPubsPatentHighlightAPIResponse {
   supplementalExaminationFlag: unknown
   usBotanicLatinName: unknown
   usBotanicVariety: unknown
-  usRefClassification: string[]
+  usRefClassification: string[] | null
   usRefCpcClassification: unknown
-  usRefGroup: string[]
-  usRefIssueDate: string[]
-  usRefIssueDateKwicHits: string[]
-  usRefPatenteeName: string[]
+  usRefGroup: string[] | null
+  usRefIssueDate: string[] | null
+  usRefIssueDateKwicHits: string[] | null
+  usRefPatenteeName: string[] | null
   volumeNumber: unknown
   correspondenceNameAddress: unknown
   correspondenceAddressCustomerNumber: unknown
   ibmtdbAccessionNumber: unknown
-  inventorsName: string[]
-  applicationKindCode: string
+  inventorsName: string[] | null
+  applicationKindCode: string | null
   inventorNameDerived: unknown
-  intlPubClassificationClass: string[]
-  issuedUsOrigClassification: string
-  curCpcSubclassFull: string[]
+  intlPubClassificationClass: string[] | null
+  issuedUsOrigClassification: string | null
+  curCpcSubclassFull: string[] | null
   cpcCurAdditionalClass: unknown
-  cpcCurInventiveClass: string[]
-  cpcCurClassificationGroup: string[]
-  curCpcClassificationFull: string[]
+  cpcCurInventiveClass: string[] | null
+  cpcCurClassificationGroup: string[] | null
+  curCpcClassificationFull: string[] | null
   cpcCombinationClassificationCur: unknown
   cpcCombinationTallyCur: unknown
   intlFurtherClassification: unknown
-  currentUsPatentClass: string[]
+  currentUsPatentClass: string[] | null
   curIntlPatentClassifictionPrimaryDateKwicHits: unknown
   curIntlPatentClssifSecHlights: unknown
   internationalClassificationInfom: unknown
   cpcOrigInventvClssifHlghts: unknown
-  idWithoutSolrPartition: string
+  idWithoutSolrPartition: string | null
   descriptionStart: number
   descriptionEnd: number
-  publicationReferenceDocumentNumberOne: string
+  publicationReferenceDocumentNumberOne: string | null
 }
