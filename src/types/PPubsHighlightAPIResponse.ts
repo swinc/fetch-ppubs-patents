@@ -71,7 +71,7 @@ export interface PPubsPatentHighlightAPIResponse {
   documentIdWithDashesDw: unknown
   pfPublDate: unknown
   pfPublDateKwicHits: unknown
-  priorityClaimsDate: string[]
+  priorityClaimsDate: string[] | null
   priorityClaimsDateKwicHits: unknown
   pfApplicationSerialNumber: unknown
   pfApplicationDescriptor: unknown
