@@ -97,7 +97,7 @@ export interface PPubsPatentHighlightAPIResponse {
   curIntlPatentClassificationPrimaryDateKwicHits: unknown
   designatedStates: unknown
   examinerGroup: string
-  issuedUsCrossRefClassification: string[]
+  issuedUsCrossRefClassification: string[] | null
   jpoFtermCurrent: unknown
   languageOfSpecification: unknown
   chosenDrawingsReference: unknown
@@ -108,7 +108,7 @@ export interface PPubsPatentHighlightAPIResponse {
   cpcOrigAdditionalClassification: unknown
   cpcAdditionalDateKwicHits: unknown
   curIntlPatentClssficationSecHighlights: unknown
-  fieldOfSearchClassSubclassHighlights: string[]
+  fieldOfSearchClassSubclassHighlights: string[] | null
   cpcCombinationSetsCurHighlights: unknown
   applicantCountry: unknown
   applicantCity: unknown
