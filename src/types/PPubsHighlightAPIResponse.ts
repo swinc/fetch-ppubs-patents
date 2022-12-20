@@ -13,7 +13,7 @@ export interface PPubsPatentHighlightAPIResponse {
   mainClassificationCode: string
   applicantName: unknown
   assigneeName: string[]
-  uspcFullClassificationFlattened: string
+  uspcFullClassificationFlattened: string | null
   ipcCodeFlattened: string
   cpcInventiveFlattened: string
   cpcAdditionalFlattened: unknown
