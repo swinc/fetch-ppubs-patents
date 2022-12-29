@@ -7,6 +7,10 @@
     "patent-search",
     "patent-data"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swinc/fetch-ppubs-patents"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
