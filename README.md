@@ -1,5 +1,7 @@
 # fetch-ppubs-patents
 
+**NOTE: The USPTO has updated their API and this library is no longer functional. It may be a easy fix but I leave that to future authors.** 
+
 `fetch-ppubs-patents` is a TypeScript/JavaScript library for pulling patents from the USPTO [Patent Public Search](https://ppubs.uspto.gov/pubwebapp/) API.
 
 It has only one dependency: [axios](https://axios-http.com/).
